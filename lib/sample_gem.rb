@@ -1,5 +1,7 @@
 require "sample_gem/version"
 
-module SampleGem
-  # Your code goes here...
+class SampleGem
+  def self.dummy_test
+    p 'Works'
+  end
 end
