@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "sample_gem"
+require "code_vitals"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

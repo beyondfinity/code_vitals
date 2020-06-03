@@ -2,11 +2,11 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sample_gem/version'
+require 'code_vitals/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'sample_gem'
-  spec.version       = SampleGem::VERSION
+  spec.name          = 'code_vitals'
+  spec.version       = CodeVitals::VERSION
   spec.authors       = ['parthibeyond']
   spec.email         = ['parthi@beyondfinity.com']
 
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = ['lib/sample_gem.rb']
+  spec.files = ['lib/code_vitals.rb']
   # spec.files = Dir.chdir(File.expand_path(__dir__)) do
   #   `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   # end
@@ -40,7 +40,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'pry', '~> 0.12.2'
-  spec.add_development_dependency 'rails'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'sandi_meter', '~> 1.2.0'

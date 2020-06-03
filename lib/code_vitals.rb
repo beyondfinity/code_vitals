@@ -3,7 +3,7 @@
 require 'sandi_meter/file_scanner'
 require 'pp'
 
-class SampleGem
+class CodeVital
   attr_accessor :app_path
 
   def initialize(path)
