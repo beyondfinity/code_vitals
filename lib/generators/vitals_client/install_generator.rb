@@ -20,6 +20,12 @@ module VitalsClient
       def inform_about_gems_found
         p "The supported gems found in this rails application are #{Detector.gem_names}"
       end
+
+      def create_vitals_report_cards
+        create_file "code_vitals/sandi_meter_report.json", ""
+        create_file "code_vitals/rspec_report.txt", ""
+        create_file "code_vitals/reek_report.json", ""
+      end
     end
   end
 end
