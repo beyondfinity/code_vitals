@@ -21,6 +21,7 @@ module VitalsClient
         create_file "code_vitals/sandi_meter_report.json", ""
         create_file "code_vitals/spec_report.json", ""
         create_file "code_vitals/reek_report.json", ""
+        create_file "code_vitals/rubocop_report.json", ""
       end
 
       def inform_about_gems_found

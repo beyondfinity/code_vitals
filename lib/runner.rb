@@ -5,7 +5,7 @@ require 'helpers/reek_runner'
 
 class Runner
   attr_accessor :metrics
-  GEM_RUNNER = {'sandi_meter' => 'SandiRunner', 'rspec-rails' => 'SpecRunner', 'reek' => 'ReekRunner'}
+  GEM_RUNNER = {'sandi_meter'=>'SandiRunner', 'rspec-rails'=>'SpecRunner', 'reek'=>'ReekRunner', 'rubocop'=>'RubocopRunner'}
 
   include Detector
   # include SandiRunner
