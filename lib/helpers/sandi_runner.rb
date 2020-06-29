@@ -1,21 +1,16 @@
-require 'sandi_meter/file_scanner'
-require 'pp'
-
-module SandiRunner
-  def perform
-    report = gather_metrics
+class SandiRunner
+  def self.perform
+    report = self.gather_metrics
     update_report(report)
   end
 
-  def gether_metrics
-    scanner = SandiMeter::FileScanner.new
-    data = scanner.scan(Rails.root.to_s)
+  def self.gather_metrics
+    output_data = `sandi_meter --json`
+    data = eval output_data
   end
 
-  def update_report(report)
-    inject_into_file 'sandi_meter_report.json' do <<-'RUBY'
-      puts report
-    RUBY
-    end
+  def self.update_report(report)
+    File.open('code_vitals/sandi_meter_report.json', 'w') { |file| file.write(report) }
+    p 'Sandi meter metric updated!'
   end
 end
