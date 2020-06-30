@@ -1,5 +1,5 @@
 module Detector
-  SUPPORTED_GEMS = ['sandi_meter', 'rspec-rails', 'rubycritic', 'reek', 'bullet', 'rubocop', 'simple_cov']
+  SUPPORTED_GEMS = ['sandi_meter', 'rspec-rails', 'rubycritic', 'reek', 'rubocop', 'simple_cov']
 
   def gems_found
     identify_supported_gems_in_bundle
